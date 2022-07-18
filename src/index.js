@@ -2,6 +2,8 @@ import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -24,6 +26,7 @@ function Redux()
 {
    return <Provider store = {createStore(reducer)}>
    <App/>
+   <ToastContainer />
    </Provider>
 
 }

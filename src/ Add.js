@@ -1,15 +1,20 @@
 import react from 'react';
 import { toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
 
 function Add() {
+  const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    dispatch({type:'insert'.payload:data})
+    toast(`${data.name}with ${data.email} added successfully`)
+
   const insert = () => {
     toast('new iten added');
   };

@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import Add from './Add.js'
 
 export default function App() {
   return (

@@ -10,6 +10,7 @@ const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 function reducer(state = { a: [] }, action) {
+  console.log('reducer()', action);
   switch (action.type) {
     case 'add':
       return state;

@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import App from './App';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -22,6 +24,7 @@ function Redux() {
   return (
     <Provider store={createStore(reducer)}>
       <App />
+      <ToastContainer />
     </Provider>
   );
 }

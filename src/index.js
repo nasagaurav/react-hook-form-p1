@@ -12,10 +12,10 @@ const root = createRoot(rootElement);
 function reducer(state = { a: [] }, action) {
   console.log('reducer()', action);
   switch (action.type) {
-    case 'add':
-      return state;
+    case 'insert':
+      return { ...state, a: [...state.a, action.payload] };
     case 'delete':
-      return state;
+      return { ...state, a: action.payload };
     default:
       return state;
   }
